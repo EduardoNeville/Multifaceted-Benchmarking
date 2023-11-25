@@ -2,3 +2,6 @@
 	path = benchmarks/machiavelli
 	url = https://github.com/aypan17/machiavelli.git
 
+[submodule "benchmarks/ethics-dataset"]
+	path = benchmarks/ethics-dataset
+	url = git@github.com:TetraspaceW/ethics-dataset.git
