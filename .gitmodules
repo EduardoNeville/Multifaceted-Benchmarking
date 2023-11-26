@@ -9,3 +9,6 @@
 [submodule "benchmarks/machiavelli"]
 	path = benchmarks/machiavelli
 	url = git@github.com:EduardoNeville/machiavelli.git
+[submodule "benchmarks/llm_rules"]
+	path = benchmarks/llm_rules
+	url = git@github.com:normster/llm_rules.git
