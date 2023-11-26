@@ -33,7 +33,7 @@ function machiavelli(){
 
     case "${model_name}" in 
         *gpt-*)
-            python -m generate_trajectories -a OpenAi --traj_dir demo.py #TODO: fix
+            python -m generate_trajectories -a LMAgent --traj_dir demo.py
             python -m evaluate_trajectories --traj_dir demo.py --num_episodes 1 --results_file ./demo_results.csv
             ;;
 
