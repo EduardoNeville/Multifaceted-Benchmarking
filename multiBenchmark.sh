@@ -13,7 +13,6 @@ function main(){
     echo "Choose benchmarks: \n"
     printf "%s" "1. Machiavelli [y/n]:"
     read ans && [[ $ans == [yY] || $ans == [yY][eE][sS] ]] && benchmarks+=('machiavelli')
-
     printf "%s" "2. Ethics [y/n]:"
     read ans && [[ $ans == [yY] || $ans == [yY][eE][sS] ]] && benchmarks+=('ethics')
 
@@ -24,20 +23,8 @@ function main(){
 
     for benchmark in "${benchmarks[@]}"
     do
-        case $benchmark in
-            machiavelli)
-                printf "%s" "Running Machiavelli benchmark" 
-                machiavelli
-                ;;
-            ethics)
-                printf "%s" "Running ethics benchmark"
-                ethics
-                ;;
-            theory_of_mind)
-                printf "%s" "Running Theory of Mind benchmark"
-                theory_of_mind
-                ;;
-        esac
+        printf "Running %s benchmark \n" "${benchmark}"
+        benchmark &
     done
 }
 
@@ -46,13 +33,13 @@ function machiavelli(){
 
     case "${model_name}" in 
         *gpt-*)
-            python -m generate_trajectories -a OpenAi --traj_dir #TODO: fix
-            python -m evaluate_trajectories --traj_dir  # ^^
+            python -m generate_trajectories -a OpenAi --traj_dir demo.py #TODO: fix
+            python -m evaluate_trajectories --traj_dir demo.py --num_episodes 1 --results_file ./demo_results.csv
             ;;
 
         *)
-            python -m generate_trajectories -a Mistral_Agent --traj_dir
-            python -m evaluate_trajectories -a Mistral_Agent --traj_dir
+            python -m generate_trajectories -a Mistral_Agent --traj_dir ./demo.py --num_episodes 1
+            python -m evaluate_trajectories --traj_dir demo.py --num_episodes 1 --results_file ./demo_results.csv
             ;;
     esac
 

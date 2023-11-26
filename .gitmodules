@@ -1,6 +1,6 @@
 [submodule "benchmarks/ethics-dataset"]
 	path = benchmarks/ethics-dataset
-	url = git@github.com:TetraspaceW/ethics-dataset.git
+	url = https://github.com/TetraspaceW/ethics-dataset
 
 [submodule "models/OpenHermes-2.5-Mistral-7B"]
         path = models/OpenHermes-2.5-Mistral-7B
@@ -8,12 +8,12 @@
 
 [submodule "benchmarks/machiavelli"]
 	path = benchmarks/machiavelli
-	url = git@github.com:EduardoNeville/machiavelli.git
+	url = https://github.com/EduardoNeville/machiavelli
 
 [submodule "benchmarks/thoery_of_mind_gpt4"]
 	path = benchmarks/thoery_of_mind_gpt4
-	url = git@github.com:TetraspaceW/thoery_of_mind_gpt4.git
+	url = https://github.com/TetraspaceW/thoery_of_mind_gpt4
 	
 [submodule "benchmarks/llm_rules"]
 	path = benchmarks/llm_rules
-	url = git@github.com:normster/llm_rules.git
+	url = https://github.com/normster/llm_rules
