@@ -12,15 +12,15 @@ function main(){
     theoryofmindParams=()
     echo "Choose benchmarks: \n"
     printf "%s" "1. Machiavelli [y/n]:"
-    read ans && [[ $ans == [yY] || $ans == [yY][eE][sS] ]] || benchmarks+=('machiavelli')
+    read ans && [[ $ans == [yY] || $ans == [yY][eE][sS] ]] && benchmarks+=('machiavelli')
 
     printf "%s" "2. Ethics [y/n]:"
-    read ans && [[ $ans == [yY] || $ans == [yY][eE][sS] ]] || benchmarks+=('ethics')
+    read ans && [[ $ans == [yY] || $ans == [yY][eE][sS] ]] && benchmarks+=('ethics')
 
     printf "%s" "3. Theory of Mind [y/n]:"
-    read ans && [[ $ans = [yY] || $ans == [yY][eE][sS] ]] || benchmarks+=('theory_of_mind')
+    read ans && [[ $ans = [yY] || $ans == [yY][eE][sS] ]] && benchmarks+=('theory_of_mind')
 
-    printf "%s \n" "${benchmarks}" 
+    printf "%s \n" "${benchmarks[@]}" 
 }
 
 function machiavelli(){
