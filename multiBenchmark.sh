@@ -7,9 +7,10 @@ benchmarks=('machiavelli' 'ethics')
 store_benchmarks=()
 function main($0, $1){
     echo "Choose benchmarks: \n"
-    echo "1. Machiavelli \n"
-    echo "2. Ethics \n"
+    echo "1. Machiavelli [y/n] \n"
+    echo "2. Ethics [y/n] \n"
     echo "3. \n"
+
 
 }
 

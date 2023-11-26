@@ -5,3 +5,4 @@
 [submodule "models/OpenHermes-2.5-Mistral-7B"]
         path = models/OpenHermes-2.5-Mistral-7B
         url = git@hf.co:teknium/OpenHermes-2.5-Mistral-7B
+
