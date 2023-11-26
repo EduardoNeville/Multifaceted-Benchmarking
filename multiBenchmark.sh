@@ -24,7 +24,7 @@ function main(){
     for benchmark in "${benchmarks[@]}"
     do
         printf "Running %s benchmark \n" "${benchmark}"
-        benchmark &
+        $benchmark &
     done
 }
 
