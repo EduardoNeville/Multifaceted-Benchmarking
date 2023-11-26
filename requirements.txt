@@ -6,3 +6,5 @@ numpy~=1.26.2
 requests~=2.31.0
 openai~=1.3.5
 sentencepiece
+gym==0.25.1
+asteval
