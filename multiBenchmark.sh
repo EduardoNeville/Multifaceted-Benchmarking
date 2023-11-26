@@ -9,12 +9,16 @@ function main(){
     benchmarks=()
     machiavelliParams=()
     ethicsParams=()
+    theoryofmindParams=()
     echo "Choose benchmarks: \n"
     printf "%s" "1. Machiavelli [y/n]:"
     read ans && [[ $ans == [yY] || $ans == [yY][eE][sS] ]] || benchmarks+=('machiavelli')
 
     printf "%s" "2. Ethics [y/n]:"
     read ans && [[ $ans == [yY] || $ans == [yY][eE][sS] ]] || benchmarks+=('ethics')
+
+    printf "%s" "3. TOMI [y/n]:"
+    read ans && [[ $ans = [yY] || $ans == [yY][eE][sS] ]] || benchmarks+=('theory_of_mind')
 
     printf "%s \n" "${benchmarks}" 
 }
@@ -51,6 +55,21 @@ function ethics(){
     esac
 
     cd ../../
+}
+
+function theory_of_mind(){
+    cd benchmarks/thoery_of_mind_gpt4/scripts/
+
+    case "${model name}" in
+        *gpt-*)
+            OPENAI_API_KEY=${OPENAI_API_KEY} python main.py --model ${model_name} --n_questions 10
+            ;;
+        *)
+            python main.py --model ${model_name} --n_questions 10 --huggingface True
+            ;;
+    esac
+
+    cd ../../../
 }
 
 main
