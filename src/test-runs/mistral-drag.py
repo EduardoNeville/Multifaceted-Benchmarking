@@ -6,8 +6,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 dir_cache = f"models/{input()}"
 
-tokenizer = AutoTokenizer.from_pretrained("models/OpenHermes-2.5-Mistral-7B", cache_dir= dir_cache)
-model = AutoModelForCausalLM.from_pretrained("models/OpenHermes-2.5-Mistral-7B", cache_dir= dir_cache)
+tokenizer = AutoTokenizer.from_pretrained("OpenHermes-2.5-Mistral-7B", cache_dir= dir_cache)
+model = AutoModelForCausalLM.from_pretrained("OpenHermes-2.5-Mistral-7B", cache_dir= dir_cache)
 
 print(tokenizer)
 print(model)
