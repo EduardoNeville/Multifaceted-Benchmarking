@@ -4,15 +4,12 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-dir_cache = f"models/{input()}"
+print(device)
 
-tokenizer = AutoTokenizer.from_pretrained("OpenHermes-2.5-Mistral-7B", cache_dir= dir_cache)
-model = AutoModelForCausalLM.from_pretrained("OpenHermes-2.5-Mistral-7B", cache_dir= dir_cache)
+tokenizer = AutoTokenizer.from_pretrained("teknium/OpenHermes-2.5-Mistral-7B")
+model = AutoModelForCausalLM.from_pretrained("teknium/OpenHermes-2.5-Mistral-7B")
 
-print(tokenizer)
-print(model)
-
-prompt= "Hello how are you"
+prompt= "Hello how are you?"
 
 model_inputs = tokenizer(prompt, return_tensor="pt")
 
