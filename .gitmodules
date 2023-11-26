@@ -9,3 +9,6 @@
 [submodule "benchmarks/machiavelli"]
 	path = benchmarks/machiavelli
 	url = git@github.com:EduardoNeville/machiavelli.git
+[submodule "benchmarks/thoery_of_mind_gpt4"]
+	path = benchmarks/thoery_of_mind_gpt4
+	url = git@github.com:TetraspaceW/thoery_of_mind_gpt4.git
