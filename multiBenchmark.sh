@@ -53,10 +53,4 @@ function ethics(){
     cd ../../
 }
 
-function llm_rules(){
-
-
-    
-}
-
 main
